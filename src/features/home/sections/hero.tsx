@@ -9,7 +9,7 @@ import { HOME_SLIDER } from "../constant";
 
 export const Hero = () => {
   return (
-    <div>
+    <section id="hero">
       <header className="container flex flex-col items-center space-y-4 py-12 text-center">
         <h1 className="text-6xl font-medium leading-tight tracking-tighter">
           Turn Your Canada and Europe Dream <br /> into a Life-Changing
@@ -58,6 +58,6 @@ export const Hero = () => {
           </div>
         ))}
       </InfiniteSlider>
-    </div>
+    </section>
   );
 };
