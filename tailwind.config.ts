@@ -21,6 +21,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        "sofia-condensed": ["var(--font-sofia-condensed)"],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -67,6 +70,9 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "blue-glow": "0 0 0 5px rgb(219 234 254)", // rgb value corresponds to blue-100
       },
     },
   },

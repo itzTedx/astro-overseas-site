@@ -46,6 +46,9 @@ export const Hero = () => {
       >
         {HOME_SLIDER.map((img) => (
           <div key={img.img} className="relative aspect-[3/4] w-[20rem]">
+            <h2 className="absolute bottom-3 left-1/2 z-10 -translate-x-1/2 rounded-md bg-white px-3 py-1 text-foreground">
+              {img.title}
+            </h2>
             <Image
               src={img.img}
               fill
