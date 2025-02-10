@@ -25,6 +25,7 @@ export const DashedLogo = () => {
           rx="11.5"
           stroke="#1D4ED8"
           strokeDasharray="4 4"
+          className="path"
         />
         <g clipPath="url(#clip0_120_76)">
           <path
@@ -97,11 +98,13 @@ export const DashedLogo = () => {
         d="M287 62L355 62C361.627 62 367 56.6274 367 50L367 0"
         stroke="url(#paint7_linear_120_76)"
         strokeDasharray="4 4"
+        className="path"
       />
       <path
         d="M91 62L13 62C6.37259 62 1 56.6274 1 50L1 0"
         stroke="url(#paint8_linear_120_76)"
         strokeDasharray="4 4"
+        className="path"
       />
       <defs>
         <filter

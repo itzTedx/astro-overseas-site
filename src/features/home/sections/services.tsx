@@ -19,8 +19,6 @@ export const Services = () => {
     setActive(index);
   }
 
-  console.log(active);
-
   const activeItem = SERVICES.find((s) => s.id === active) || SERVICES[0];
   return (
     <section id="services" className="bg-[#040E30] py-24">
@@ -66,7 +64,7 @@ export const Services = () => {
           </div>
         )}
       </div>
-      <div className="container grid grid-cols-2 items-center justify-center gap-16 py-24 text-white">
+      <div className="container grid grid-cols-2 items-center justify-center gap-16 pt-24 text-white">
         <div className="space-y-6">
           <h3 className="text-6xl font-semibold leading-tight">
             We help Making your dream into Reality

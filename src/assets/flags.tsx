@@ -1,4 +1,6 @@
-export const FlagHungary = () => {
+import type { SVGProps } from "react";
+
+export const FlagHungary = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="133"
@@ -6,6 +8,7 @@ export const FlagHungary = () => {
       viewBox="0 0 133 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_144)">
         <path d="M0 0H133V80H0" fill="#477050" />
@@ -21,7 +24,7 @@ export const FlagHungary = () => {
   );
 };
 
-export const FlagLuxembourg = () => {
+export const FlagLuxembourg = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="133"
@@ -29,6 +32,7 @@ export const FlagLuxembourg = () => {
       viewBox="0 0 133 80"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_158)">
         <path d="M0 0H133V26.6667H0V0Z" fill="#EF3340" />
@@ -44,7 +48,7 @@ export const FlagLuxembourg = () => {
   );
 };
 
-export const FlagNorway = () => {
+export const FlagNorway = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="133"
@@ -52,6 +56,7 @@ export const FlagNorway = () => {
       viewBox="0 0 133 98"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_172)">
         <path d="M133 0H0V98H133V0Z" fill="#BA0C2F" />
@@ -73,7 +78,7 @@ export const FlagNorway = () => {
   );
 };
 
-export const FlagFinland = () => {
+export const FlagFinland = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="134"
@@ -81,6 +86,7 @@ export const FlagFinland = () => {
       viewBox="0 0 134 81"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_189)">
         <mask
@@ -111,7 +117,7 @@ export const FlagFinland = () => {
   );
 };
 
-export const FlagLatvia = () => {
+export const FlagLatvia = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="133"
@@ -119,6 +125,7 @@ export const FlagLatvia = () => {
       viewBox="0 0 133 81"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_149)">
         <path d="M0 0H133V81H0" fill="#9D2235" />
@@ -133,7 +140,7 @@ export const FlagLatvia = () => {
   );
 };
 
-export const FlagSweden = () => {
+export const FlagSweden = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="134"
@@ -141,6 +148,7 @@ export const FlagSweden = () => {
       viewBox="0 0 134 83"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_179)">
         <mask
@@ -171,7 +179,7 @@ export const FlagSweden = () => {
   );
 };
 
-export const FlagLithuania = () => {
+export const FlagLithuania = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
       width="134"
@@ -179,6 +187,7 @@ export const FlagLithuania = () => {
       viewBox="0 0 134 81"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
       <g clipPath="url(#clip0_34_139)">
         <path d="M0 0H134V81H0V0Z" fill="#C1272D" />

@@ -1,3 +1,4 @@
+import { Counter } from "@/features/home/sections/counter";
 import { Countries } from "@/features/home/sections/countries";
 import { Features } from "@/features/home/sections/features";
 import { Hero } from "@/features/home/sections/hero";
@@ -10,6 +11,7 @@ export default function Home() {
       <Features />
       <Services />
       <Countries />
+      <Counter />
     </main>
   );
 }
