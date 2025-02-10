@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
+import colors from "tailwindcss/colors";
 
 export default {
   darkMode: ["class"],
@@ -20,7 +21,11 @@ export default {
         "2xl": "1400px",
       },
     },
+
     extend: {
+      backgroundImage: {
+        "split-white-blue": `linear-gradient(0deg, ${colors.white} 50%, #040E30 50%)`,
+      },
       fontFamily: {
         "sofia-condensed": ["var(--font-sofia-condensed)"],
       },

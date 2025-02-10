@@ -107,3 +107,10 @@ export const SERVICES = [
     image: "/images/service-1.jpg",
   },
 ];
+
+export const SERVICES_FEATURE = [
+  "Professional Guidance",
+  "Expert Consultants",
+  "Seamless Process",
+  "Reliable Support",
+];
