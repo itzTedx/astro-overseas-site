@@ -1,18 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Sofia_Sans_Condensed } from "next/font/google";
 
 import { Footer } from "@/components/global/footer";
 import { Navbar } from "@/components/global/navbar";
+import { cn } from "@/lib/utils";
 
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const sofia = Sofia_Sans_Condensed({
+  variable: "--font-sofia-condensed",
   subsets: ["latin"],
 });
 
@@ -29,7 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={cn(
+          manrope.className,
+          sofia.variable,
+          "scroll-smooth antialiased"
+        )}
       >
         <Navbar />
         {children}
