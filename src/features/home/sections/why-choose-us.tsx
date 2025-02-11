@@ -32,7 +32,7 @@ export const WhyChooseUs = () => {
           </p>
         </div>
         <Image
-          src="/images/expertise.jpg"
+          src="/images/expertise.webp"
           fill
           alt="Professional immigration consultants working with clients"
           className="object-cover"

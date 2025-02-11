@@ -83,28 +83,28 @@ export const SERVICES = [
     title: "Work Permit",
     description:
       "Expand your business globally with our seamless business visa services, ensuring fast and efficient processing for all your corporate travel needs.",
-    image: "/images/service-1.jpg",
+    image: "/images/service-1.webp",
   },
   {
     id: 2,
     title: "Tourist Visa",
     description:
       "Expand your business globally with our seamless business visa services, ensuring fast and efficient processing for all your corporate travel needs.",
-    image: "/images/service-1.jpg",
+    image: "/images/service-1.webp",
   },
   {
     id: 3,
     title: "Business Visa",
     description:
       "Expand your business globally with our seamless business visa services, ensuring fast and efficient processing for all your corporate travel needs.",
-    image: "/images/service-1.jpg",
+    image: "/images/service-1.webp",
   },
   {
     id: 4,
     title: "Residence Visa",
     description:
       "Expand your business globally with our seamless business visa services, ensuring fast and efficient processing for all your corporate travel needs.",
-    image: "/images/service-1.jpg",
+    image: "/images/service-1.webp",
   },
 ];
 

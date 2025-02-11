@@ -13,7 +13,7 @@ export const Feedbacks = () => {
           <LogoIcon aria-hidden="true" className="max-md:size-6" />
         </div>
         <Image
-          src="/images/feedback.jpg"
+          src="/images/feedback.webp"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
           alt="Happy clients working with Astro Overseas"
