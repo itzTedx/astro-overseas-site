@@ -58,7 +58,7 @@ export const Cta = () => {
             Overseas is here to guide you every step of the way.
           </p>
         </div>
-        <ul className="mt-12 flex flex-wrap gap-6" role="list">
+        <ul className="mt-12 flex gap-6 max-md:flex-wrap" role="list">
           {keyValuesList}
         </ul>
       </div>
