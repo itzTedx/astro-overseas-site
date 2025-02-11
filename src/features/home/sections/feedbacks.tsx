@@ -50,7 +50,7 @@ export const Feedbacks = () => {
           </span>
           <blockquote
             itemProp="reviewBody"
-            className="pb-4 text-xl font-medium leading-relaxed md:pb-9 md:text-3xl"
+            className="pb-4 text-xl font-medium !leading-relaxed md:pb-9 md:text-3xl"
           >
             “Astro Overseas made my visa process stress-free and
             straightforward. Their expert guidance helped me secure my European
