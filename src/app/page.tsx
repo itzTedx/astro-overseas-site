@@ -57,11 +57,9 @@ const Cta = dynamic(
 export default function Home() {
   return (
     <main>
-      {/* Critical content loads first */}
       <Hero />
       <Features />
 
-      {/* Less critical content loads progressively */}
       <Suspense fallback={<LoadingSpinner />}>
         <Services />
         <Countries />
