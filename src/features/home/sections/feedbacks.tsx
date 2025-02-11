@@ -42,6 +42,9 @@ export const Feedbacks = () => {
             content="Astro Overseas Visa Services"
           />
           <meta itemProp="reviewRating" content="5" />
+          <span itemProp="ratingValue" className="sr-only">
+            5
+          </span>
           <blockquote
             itemProp="reviewBody"
             className="pb-9 text-3xl font-medium leading-relaxed"
@@ -60,7 +63,7 @@ export const Feedbacks = () => {
               <span itemProp="name">Ahmed R.</span>
             </strong>
             <span itemProp="jobTitle" className="text-sm font-light">
-              Software Engineer
+              Happy Client
             </span>
             <meta itemProp="datePublished" content="2024-02-10" />
           </footer>
