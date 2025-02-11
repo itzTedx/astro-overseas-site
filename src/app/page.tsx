@@ -1,5 +1,6 @@
 import { Counter } from "@/features/home/sections/counter";
 import { Countries } from "@/features/home/sections/countries";
+import { Faqs } from "@/features/home/sections/faq";
 import { Features } from "@/features/home/sections/features";
 import { Feedbacks } from "@/features/home/sections/feedbacks";
 import { Hero } from "@/features/home/sections/hero";
@@ -16,6 +17,7 @@ export default function Home() {
       <Counter />
       <WhyChooseUs />
       <Feedbacks />
+      <Faqs />
     </main>
   );
 }
