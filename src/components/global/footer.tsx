@@ -12,6 +12,7 @@ const OrganizationSchema = {
     "@type": "PostalAddress",
     streetAddress: "#313, West Zone Building opposite Karama Centre",
     addressLocality: "Al Karama, Dubai",
+
     addressCountry: "United Arab Emirates",
   },
   openingHoursSpecification: {
