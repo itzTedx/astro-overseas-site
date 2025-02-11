@@ -34,7 +34,7 @@ export const WhyChooseUs = () => {
           fill
           alt="Professional immigration consultants working with clients"
           className="object-cover"
-          sizes="(max-width: 768px) 100vw, 70vw"
+          sizes="(max-width: 768px) 100vw, 75vw"
         />
       </article>
     </section>

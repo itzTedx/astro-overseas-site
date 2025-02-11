@@ -1,134 +1,162 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
 const data = [
   {
-    title: "Expert Guidance, Seamless Process",
+    title: "Expert Immigration Guidance",
     content:
-      "Navigating visa applications can be complex, but our team of experienced immigration consultants ensures a hassle-free journey. From documentation to approvals, we guide you every step of the way.",
+      "With over 15 years of experience, our certified immigration consultants provide expert guidance through complex visa processes. We maintain a 95% success rate in visa approvals across all categories.",
   },
   {
-    title: "High Success Rate, Proven Results",
-
+    title: "Comprehensive Documentation Support",
     content:
-      "Navigating visa applications can be complex, but our team of experienced immigration consultants ensures a hassle-free journey. From documentation to approvals, we guide you every step of the way.",
+      "Our team handles all aspects of visa documentation, ensuring accuracy and completeness. We provide detailed checklists, document verification, and professional translation services when needed.",
   },
   {
-    title: "End-to-End Visa Solutions",
+    title: "Personalized Visa Solutions",
     content:
-      "Navigating visa applications can be complex, but our team of experienced immigration consultants ensures a hassle-free journey. From documentation to approvals, we guide you every step of the way.",
+      "Every client receives a tailored visa strategy based on their unique circumstances. Our consultants analyze your profile and recommend the most suitable immigration pathways.",
   },
   {
-    title: "Fast & Reliable Processing",
+    title: "Rapid Processing Times",
     content:
-      "Navigating visa applications can be complex, but our team of experienced immigration consultants ensures a hassle-free journey. From documentation to approvals, we guide you every step of the way.",
+      "We expedite your application process through our established relationships with immigration authorities and efficient documentation procedures, reducing processing times by up to 40%.",
   },
   {
-    title: "Personalized Support & Consultation",
+    title: "24/7 Client Support",
     content:
-      "Navigating visa applications can be complex, but our team of experienced immigration consultants ensures a hassle-free journey. From documentation to approvals, we guide you every step of the way.",
+      "Access round-the-clock support through our dedicated client portal. Get real-time updates on your application status and instant responses to your queries.",
   },
   {
-    title: "Trusted by Thousands Worldwide",
+    title: "Global Recognition",
     content:
-      "Navigating visa applications can be complex, but our team of experienced immigration consultants ensures a hassle-free journey. From documentation to approvals, we guide you every step of the way.",
+      "Trusted by over 10,000 successful immigrants worldwide. Our services are recognized by major immigration authorities and educational institutions globally.",
   },
 ];
 
-export function TimedAccordion() {
+const INTERVAL_TIME = 5000;
+const TICK_INTERVAL = 10;
+
+export const TimedAccordion = memo(function TimedAccordion() {
   const [featureOpen, setFeatureOpen] = useState<number>(0);
   const [timer, setTimer] = useState<number>(0);
+
+  const handleItemClick = useCallback((index: number) => {
+    setFeatureOpen(index);
+    setTimer(0);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(() => {
-      setTimer((prev) => prev + 10);
-    }, 10);
+      setTimer((prev) => prev + TICK_INTERVAL);
+    }, TICK_INTERVAL);
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
-    if (timer > 5000) {
+    if (timer > INTERVAL_TIME) {
       setFeatureOpen((prev) => (prev + 1) % data.length);
       setTimer(0);
     }
   }, [timer]);
 
   return (
-    <div>
-      {data.map((item, index) => (
-        <button
-          className="w-full"
-          key={item.title}
-          onClick={() => {
-            setFeatureOpen(index);
-            setTimer(0);
-          }}
-          type="button"
-        >
-          <TextComponent
-            content={item.content}
+    <div itemScope itemType="https://schema.org/ItemList">
+      <h2 className="sr-only">Why Choose Our Immigration Services</h2>
+      <meta itemProp="numberOfItems" content={data.length.toString()} />
+      <meta itemProp="itemListOrder" content="Unordered" />
+      <div
+        role="tablist"
+        aria-label="Immigration services features"
+        className="space-y-2"
+      >
+        {data.map((item, index) => (
+          <AccordionItem
+            key={item.title}
+            index={index}
+            item={item}
             isOpen={featureOpen === index}
-            loadingWidthPercent={featureOpen === index ? timer / 50 : 0}
-            number={index + 1}
-            title={item.title}
+            timer={featureOpen === index ? timer : 0}
+            onClick={handleItemClick}
           />
-        </button>
-      ))}
+        ))}
+      </div>
     </div>
   );
-}
+});
 
-export default TimedAccordion;
-function TextComponent({
-  number,
-  title,
-  content,
+const AccordionItem = memo(function AccordionItem({
+  index,
+  item,
   isOpen,
-  loadingWidthPercent,
-}: Readonly<{
-  number: number;
-  title: string;
-  content: string;
+  timer,
+  onClick,
+}: {
+  index: number;
+  item: { title: string; content: string };
   isOpen: boolean;
-  loadingWidthPercent?: number;
-}>) {
+  timer: number;
+  onClick: (index: number) => void;
+}) {
   return (
-    <div className={cn("transform-gpu transition-all")}>
-      <div className="flex w-full items-center justify-between gap-4 py-4">
-        <h2 className={cn("text-left text-xl font-medium text-blue-950")}>
-          {title}
-        </h2>
-        <p
+    <div
+      role="tab"
+      aria-expanded={isOpen}
+      className="transform-gpu rounded-xl border bg-white px-4"
+      itemScope
+      itemProp="itemListElement"
+      itemType="https://schema.org/ListItem"
+    >
+      <meta itemProp="position" content={(index + 1).toString()} />
+      <button
+        className="w-full"
+        onClick={() => onClick(index)}
+        type="button"
+        aria-controls={`content-${index}`}
+        id={`tab-${index}`}
+      >
+        <div className="flex w-full items-center justify-between gap-4 py-4">
+          <h3
+            className="text-left text-xl font-medium text-blue-950"
+            itemProp="name"
+          >
+            {item.title}
+          </h3>
+          <span
+            className="inline-flex size-8 shrink-0 items-center justify-center font-sofia-condensed text-xl text-neutral-500"
+            aria-hidden="true"
+          >
+            0{index + 1}
+          </span>
+        </div>
+        <div
+          id={`content-${index}`}
+          role="tabpanel"
+          aria-labelledby={`tab-${index}`}
           className={cn(
-            "inline-flex size-8 shrink-0 items-center justify-center font-sofia-condensed text-xl text-neutral-500"
+            "w-full transform-gpu overflow-hidden text-left text-neutral-600 transition-all duration-500",
+            isOpen ? "max-h-64" : "max-h-0"
           )}
         >
-          0{number}
-        </p>
-      </div>
-      <div
-        className={cn(
-          "w-full transform-gpu overflow-hidden text-left text-neutral-600 transition-all duration-500 dark:text-neutral-400",
-          isOpen ? "max-h-64" : "max-h-0"
-        )}
-      >
-        <p className="py-2 text-lg">{content}</p>
-        <div className="w-full pb-4">
-          <div className="relative h-1 w-full overflow-hidden rounded-full">
-            <div
-              className={cn(
-                "absolute left-0 top-0 z-10 h-1 rounded-full bg-neutral-500"
-              )}
-              style={{ width: `${loadingWidthPercent}%` }}
-            />
-            <div
-              className={cn("absolute left-0 top-0 h-1 w-full bg-neutral-100")}
-            />
+          <p className="pb-4 pt-2 text-lg" itemProp="description">
+            {item.content}
+          </p>
+          <div className="w-full pb-4" aria-hidden="true">
+            <div className="relative h-1 w-full overflow-hidden rounded-full">
+              <div
+                className="absolute left-0 top-0 z-10 h-1 rounded-full bg-blue-500"
+                style={{ width: `${timer / 50}%` }}
+              />
+              <div className="absolute left-0 top-0 h-1 w-full bg-neutral-100" />
+            </div>
           </div>
         </div>
-      </div>
+      </button>
     </div>
   );
-}
+});
+
+export default TimedAccordion;
