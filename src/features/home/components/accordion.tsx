@@ -30,7 +30,7 @@ const AccordionItem: React.FC<AccordionItemProps> = memo(
       >
         <h3>
           <button
-            className="flex w-full items-center justify-between py-4 text-left text-xl font-medium transition-all hover:text-blue-700"
+            className="flex w-full items-center justify-between py-3 text-left text-lg font-medium transition-all hover:text-blue-700 md:py-4 md:text-xl"
             onClick={() => setIsOpen(!isOpen)}
             itemProp="name"
             aria-expanded={isOpen}
@@ -58,7 +58,7 @@ const AccordionItem: React.FC<AccordionItemProps> = memo(
           itemType="https://schema.org/Answer"
         >
           <div className="overflow-hidden">
-            <p itemProp="text" className="pb-6 text-neutral-600">
+            <p itemProp="text" className="pb-6 text-neutral-600 max-md:text-sm">
               {answer}
             </p>
             <Button

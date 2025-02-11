@@ -34,12 +34,12 @@ const faqs = [
 
 export function Faqs() {
   return (
-    <section id="faq" className="container grid grid-cols-2 gap-6 pb-24">
-      <div className="space-y-6">
-        <div className="flex items-center gap-3">
-          <IconFaq />
+    <section id="faq" className="container grid gap-6 pb-24 md:grid-cols-2">
+      <div className="space-y-6 max-md:order-2">
+        <div className="flex gap-3 max-md:flex-col md:items-center">
+          <IconFaq className="max-md:size-12" />
           <div>
-            <h2 className="text-3xl font-semibold">
+            <h2 className="text-xl font-semibold md:text-3xl">
               Frequently Asked Questions
             </h2>
             <p>
@@ -51,8 +51,8 @@ export function Faqs() {
 
         <Accordion items={faqs} />
       </div>
-      <div className="flex items-center justify-center">
-        <IconVisa />
+      <div className="flex items-center justify-center max-md:order-1">
+        <IconVisa className="max-md:h-auto max-md:w-1/2" />
       </div>
     </section>
   );

@@ -35,12 +35,12 @@ export const Footer = memo(() => {
       <script type="application/ld+json">
         {JSON.stringify(OrganizationSchema)}
       </script>
-      <div className="container flex justify-between py-24">
+      <div className="container justify-between py-12 md:flex md:py-24">
         <div className="max-w-[40ch] space-y-7">
           <Link href="/" aria-label="Astro Overseas Home">
             <Logo className="brightness-[15] saturate-0" aria-hidden="true" />
           </Link>
-          <h5>Astro Overseas</h5>
+          <h5 className="sr-only">Astro Overseas</h5>
           <p>
             Unlock Your Global Opportunities: Work Permits and Permanent
             Residency Visas for Canada and Europe with Astro Overseas!
@@ -75,16 +75,17 @@ export const Footer = memo(() => {
           </div>
         </nav>
       </div>
-      <p className="border-t border-blue-950 p-2 text-center text-blue-800">
+      <p className="border-t border-blue-950 p-2 text-center text-blue-200">
         <small>
-          Copyright © {new Date().getFullYear()}. All Rights Reserved. Website
-          Developed by{" "}
+          Copyright © {new Date().getFullYear()}. All Rights Reserved.{" "}
+          <br className="md:hidden" />
+          Website Developed by{" "}
           <Link
             href="https://www.zironmedia.com?utm_source=astrooverseas"
             target="_blank"
             aria-label="Visit Ziron Pro website"
           >
-            <strong className="text-blue-700">Ziron Pro.</strong>
+            <strong className="text-blue-100">Ziron Pro.</strong>
           </Link>
         </small>
       </p>

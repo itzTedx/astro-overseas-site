@@ -81,3 +81,9 @@ body {
     stroke-dashoffset: 1000;
   }
 }
+
+/* //Debugging CSS */
+/* * {
+  outline: 1px solid hsla(0, 100%, 50%, 1);
+  background-color: hsla(0, 100%, 50%, 0.05);
+} */
