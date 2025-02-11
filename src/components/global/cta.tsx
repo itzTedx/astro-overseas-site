@@ -35,7 +35,7 @@ export const Cta = () => {
 
   return (
     <section
-      className="container relative flex max-w-6xl items-center justify-center gap-24 overflow-x-clip rounded-3xl bg-blue-700 px-6 py-12 text-white max-md:flex-col max-md:rounded-b-none md:mb-24 md:px-24"
+      className="container relative flex max-w-6xl items-center justify-center gap-24 rounded-3xl bg-blue-700 px-6 py-12 text-white max-md:flex-col max-md:overflow-x-clip max-md:rounded-b-none md:mb-24 md:px-24"
       aria-label="Call to Action"
     >
       <IconMetalLogo
