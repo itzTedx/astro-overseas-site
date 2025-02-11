@@ -5,12 +5,12 @@ import { LogoIcon } from "@/assets/logo";
 export const Feedbacks = () => {
   return (
     <section
-      className="container grid grid-cols-3 gap-6 py-24"
+      className="container grid gap-6 py-24 md:grid-cols-3"
       aria-labelledby="testimonials-heading"
     >
       <div className="relative aspect-[3/4] h-full">
-        <div className="absolute right-0 top-[10%] z-10 flex size-16 translate-x-1/2 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-xl">
-          <LogoIcon aria-hidden="true" />
+        <div className="absolute right-0 top-full z-10 flex size-12 -translate-x-1/3 items-center justify-center rounded-2xl bg-blue-700 text-white shadow-xl max-md:-translate-y-1/2 md:top-[10%] md:size-16 md:translate-x-1/2">
+          <LogoIcon aria-hidden="true" className="max-md:size-6" />
         </div>
         <Image
           src="/images/feedback.jpg"
@@ -20,9 +20,12 @@ export const Feedbacks = () => {
           className="rounded-3xl object-cover"
         />
       </div>
-      <div className="container col-span-2 max-w-3xl space-y-12 py-12">
+      <div className="container max-w-3xl space-y-9 py-6 md:col-span-2 md:space-y-12 md:py-12">
         <header>
-          <h2 id="testimonials-heading" className="text-3xl font-medium">
+          <h2
+            id="testimonials-heading"
+            className="text-2xl font-medium md:text-3xl"
+          >
             See What Our Happy Clients Say
           </h2>
           <p className="pt-3">
@@ -47,7 +50,7 @@ export const Feedbacks = () => {
           </span>
           <blockquote
             itemProp="reviewBody"
-            className="pb-9 text-3xl font-medium leading-relaxed"
+            className="pb-4 text-xl font-medium leading-relaxed md:pb-9 md:text-3xl"
           >
             “Astro Overseas made my visa process stress-free and
             straightforward. Their expert guidance helped me secure my European

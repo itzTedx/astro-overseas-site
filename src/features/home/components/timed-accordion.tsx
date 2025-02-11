@@ -105,7 +105,7 @@ const AccordionItem = memo(function AccordionItem({
     <div
       role="tab"
       aria-expanded={isOpen}
-      className="transform-gpu rounded-xl border bg-white px-4"
+      className="transform-gpu rounded-xl border bg-white px-3 md:px-4"
       itemScope
       itemProp="itemListElement"
       itemType="https://schema.org/ListItem"
@@ -118,15 +118,15 @@ const AccordionItem = memo(function AccordionItem({
         aria-controls={`content-${index}`}
         id={`tab-${index}`}
       >
-        <div className="flex w-full items-center justify-between gap-4 py-4">
+        <div className="flex w-full items-center justify-between gap-4 max-md:pt-2 md:py-4">
           <h3
-            className="text-left text-xl font-medium text-blue-950"
+            className="text-left font-medium text-blue-950 md:text-xl"
             itemProp="name"
           >
             {item.title}
           </h3>
           <span
-            className="inline-flex size-8 shrink-0 items-center justify-center font-sofia-condensed text-xl text-neutral-500"
+            className="inline-flex size-8 shrink-0 items-center justify-center font-sofia-condensed text-neutral-500 md:text-xl"
             aria-hidden="true"
           >
             0{index + 1}
@@ -141,7 +141,7 @@ const AccordionItem = memo(function AccordionItem({
             isOpen ? "max-h-64" : "max-h-0"
           )}
         >
-          <p className="pb-4 pt-2 text-lg" itemProp="description">
+          <p className="pb-4 pt-2 md:text-lg" itemProp="description">
             {item.content}
           </p>
           {isOpen ? (

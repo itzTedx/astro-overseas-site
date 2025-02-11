@@ -35,15 +35,15 @@ export const Cta = () => {
 
   return (
     <section
-      className="container relative mb-24 flex max-w-6xl items-center justify-center gap-24 rounded-3xl bg-blue-700 px-24 py-12 text-white"
+      className="container relative mb-24 flex max-w-6xl items-center justify-center gap-24 overflow-hidden rounded-3xl bg-blue-700 px-6 py-12 text-white max-md:flex-col md:px-24"
       aria-label="Call to Action"
     >
       <IconMetalLogo
-        className="absolute left-0 z-10 -translate-x-1/2"
+        className="absolute z-10 max-md:top-0 max-md:-translate-y-1/2 md:left-0 md:-translate-x-1/2"
         aria-hidden="true"
       />
       <DashedLineLeft
-        className="absolute left-9 z-0 translate-y-1.5"
+        className="absolute left-9 z-0 hidden translate-y-1.5 md:block"
         aria-hidden="true"
       />
 
@@ -58,14 +58,14 @@ export const Cta = () => {
             Overseas is here to guide you every step of the way.
           </p>
         </div>
-        <ul className="mt-12 flex gap-6" role="list">
+        <ul className="mt-12 flex flex-wrap gap-6" role="list">
           {keyValuesList}
         </ul>
       </div>
 
       <div className="relative">
         <DashedLineRight
-          className="absolute -top-1/2 right-1/2 -translate-y-1.5"
+          className="absolute -top-1/2 right-1/2 z-10 shrink-0 -translate-y-1.5"
           aria-hidden="true"
         />
         <PrimaryButton inverse>Get started today</PrimaryButton>

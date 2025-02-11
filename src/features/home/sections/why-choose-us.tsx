@@ -7,24 +7,26 @@ import TimedAccordion from "../components/timed-accordion";
 export const WhyChooseUs = () => {
   return (
     <section
-      className="container grid grid-cols-2 gap-6 rounded-2xl p-16 shadow-blue-glow"
+      className="container grid gap-6 rounded-2xl md:grid-cols-2 md:p-16 md:shadow-blue-glow"
       aria-label="Why Choose Astro Overseas"
     >
       <div>
-        <h2 className="text-balance text-3xl font-semibold">
+        <h2 className="text-balance text-xl font-semibold md:text-3xl">
           Why Choose Astro Overseas? - Your Gateway to Global Opportunities
         </h2>
-        <div className="pt-8">
+        <div className="pt-6 md:pt-8">
           <TimedAccordion />
         </div>
       </div>
-      <article className="relative flex h-[48rem] items-end justify-center overflow-hidden rounded-2xl p-12">
-        <div className="relative z-10 max-w-sm space-y-2 rounded-xl bg-white px-6 py-4 shadow-xl">
+      <article className="relative flex h-96 items-end justify-center overflow-hidden rounded-2xl p-6 md:h-[48rem] md:p-12">
+        <div className="relative z-10 max-w-sm space-y-1 rounded-xl bg-white px-3 py-2 shadow-xl md:space-y-2 md:px-6 md:py-4">
           <header className="flex items-center">
-            <IconRocket aria-hidden="true" />
-            <h3 className="ml-3 font-semibold">Expertise That Opens Doors</h3>
+            <IconRocket aria-hidden="true" className="max-md:size-8" />
+            <h3 className="ml-2 font-semibold md:ml-3">
+              Expertise That Opens Doors
+            </h3>
           </header>
-          <p className="text-sm">
+          <p className="text-xs font-light md:text-sm">
             With years of experience in visa and immigration services, we
             simplify your journey to working, studying, or settling abroad.
           </p>

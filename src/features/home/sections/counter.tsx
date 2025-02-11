@@ -19,7 +19,7 @@ export const Counter = memo(() => {
       <h3 className="text-3xl font-medium">
         Astro overseas has assisted over 4,600+ clients in securing permits
       </h3>
-      <div className="flex items-center justify-between gap-4 pt-9 font-sofia-condensed text-blue-700">
+      <div className="flex items-center justify-between gap-4 pt-9 font-sofia-condensed text-blue-700 max-md:flex-col">
         {COUNTER_DATA.map(({ value, label }, i) => (
           <Fragment key={label}>
             <div aria-label={`${label}: ${value}+`}>
@@ -31,7 +31,7 @@ export const Counter = memo(() => {
 
             {i < COUNTER_DATA.length - 1 && (
               <Separator
-                className="h-16 bg-blue-700"
+                className="hidden h-16 bg-blue-700 md:block"
                 orientation="vertical"
                 aria-hidden="true"
               />

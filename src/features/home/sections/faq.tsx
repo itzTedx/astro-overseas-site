@@ -1,5 +1,3 @@
-"use client";
-
 import { IconFaq } from "@/assets/icon-faq";
 import { IconVisa } from "@/assets/icon-visa";
 
