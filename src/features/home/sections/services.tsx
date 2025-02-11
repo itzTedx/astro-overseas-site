@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 import { SERVICES, SERVICES_FEATURE } from "../constant";
 
 const ServiceFeature = memo(({ feature }: { feature: string }) => (
-  <li className="flex items-center gap-2 rounded-full border border-blue-50/10 bg-blue-50/10 px-5 py-4 text-xl">
+  <li className="flex items-center gap-2 rounded-full border border-blue-50/10 bg-blue-50/10 px-3 py-2 text-lg md:px-5 md:py-4 md:text-xl">
     <IconCircleCheck aria-hidden="true" />
     {feature}
   </li>
@@ -35,7 +35,7 @@ const ServiceCard = memo(
       aria-selected={isActive}
       tabIndex={0}
       className={cn(
-        "cursor-pointer rounded-full px-7 py-4 text-2xl font-medium text-background transition-colors",
+        "cursor-pointer rounded-full px-5 py-3 font-medium text-background transition-colors md:px-7 md:py-4 md:text-2xl",
         isActive ? "bg-blue-700" : "bg-foreground"
       )}
       onClick={onClick}
@@ -54,16 +54,16 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="bg-[#040E30] py-24"
+      className="bg-[#040E30] py-12 md:py-24"
       aria-label="Our Services"
     >
-      <div className="container grid grid-cols-3 gap-6">
-        <div className="col-span-2 flex flex-col justify-between gap-6 rounded-3xl bg-white p-14">
-          <h2 className="text-[3.25rem] font-semibold leading-tight">
+      <div className="container grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="flex flex-col justify-between gap-6 rounded-3xl bg-white p-6 md:col-span-2 md:p-14">
+          <h2 className="text-3xl font-semibold leading-tight md:text-[3.25rem]">
             Find the Perfect Visa Solution for Your Travel, Work, or Business
             Needs
           </h2>
-          <ul role="tablist" className="flex flex-wrap gap-4">
+          <ul role="tablist" className="flex flex-wrap gap-2 md:gap-4">
             {SERVICES.map((s) => (
               <ServiceCard
                 key={s.id}
@@ -76,7 +76,7 @@ export const Services = () => {
         </div>
         {activeItem && (
           <div className="overflow-hidden rounded-3xl bg-white">
-            <div className="relative h-[25rem] w-full">
+            <div className="relative h-64 w-full md:h-[25rem]">
               <Image
                 src={activeItem.image}
                 fill
@@ -98,12 +98,12 @@ export const Services = () => {
         )}
       </div>
 
-      <div className="container grid grid-cols-2 items-center justify-center gap-16 pt-24 text-white">
+      <div className="container grid items-center justify-center gap-16 pt-24 text-white md:grid-cols-2">
         <div className="space-y-6">
-          <h2 className="text-6xl font-semibold leading-tight">
+          <h2 className="text-4xl font-semibold leading-tight md:text-6xl">
             We help Making your dream into Reality
           </h2>
-          <div className="space-y-3 text-2xl font-light leading-relaxed">
+          <div className="space-y-3 text-xl font-light leading-relaxed md:text-2xl">
             <p>
               Astro Overseas is a leading immigration consultancy in Dubai,
               specializing in European work permits and visas.
@@ -123,14 +123,14 @@ export const Services = () => {
           </Link>
         </div>
         <div className="space-y-12">
-          <ul className="flex flex-wrap gap-6">
+          <ul className="flex flex-wrap gap-3 md:gap-6">
             {SERVICES_FEATURE.map((feature) => (
               <ServiceFeature key={feature} feature={feature} />
             ))}
           </ul>
           <Separator className="bg-blue-50/30" />
           <div className="grid grid-cols-2 items-center gap-6">
-            <h3 className="text-balance text-2xl font-semibold leading-relaxed">
+            <h3 className="text-balance text-lg font-semibold leading-relaxed md:text-2xl">
               Get Your Own Visa Within 30 Days
             </h3>
             <PrimaryButton className="ml-auto w-fit">Contact Now</PrimaryButton>
