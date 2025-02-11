@@ -144,15 +144,17 @@ const AccordionItem = memo(function AccordionItem({
           <p className="pb-4 pt-2 text-lg" itemProp="description">
             {item.content}
           </p>
-          <div className="w-full pb-4" aria-hidden="true">
-            <div className="relative h-1 w-full overflow-hidden rounded-full">
-              <div
-                className="absolute left-0 top-0 z-10 h-1 rounded-full bg-blue-500"
-                style={{ width: `${timer / 50}%` }}
-              />
-              <div className="absolute left-0 top-0 h-1 w-full bg-neutral-100" />
+          {isOpen ? (
+            <div className="w-full pb-4" aria-hidden="true">
+              <div className="relative h-1 w-full overflow-hidden rounded-full">
+                <div
+                  className="absolute left-0 top-0 z-10 h-1 rounded-full bg-blue-500"
+                  style={{ width: `${timer / 50}%` }}
+                />
+                <div className="absolute left-0 top-0 h-1 w-full bg-neutral-100" />
+              </div>
             </div>
-          </div>
+          ) : null}
         </div>
       </button>
     </div>

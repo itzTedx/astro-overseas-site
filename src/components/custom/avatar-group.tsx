@@ -33,6 +33,7 @@ export default function AvatarGroup() {
         variant="secondary"
         className="flex size-12 items-center justify-center rounded-full bg-blue-50 text-blue-700 ring-2 ring-background hover:bg-blue-50 hover:text-blue-800"
         size="icon"
+        asChild
       >
         <IconPlus className="!size-5" />
       </Button>
