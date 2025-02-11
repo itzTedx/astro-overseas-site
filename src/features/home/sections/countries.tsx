@@ -8,17 +8,51 @@ import { CountryTooltip } from "../components/country-tooltip";
 export const Countries = memo(function Countries() {
   return (
     <section className="bg-split-white-blue" aria-labelledby="countries-title">
-      <div className="container rounded-2xl bg-blue-100 p-14">
-        <h2 id="countries-title" className="text-4xl font-medium">
+      <div className="container rounded-2xl bg-blue-100 p-6 md:p-14">
+        <h2 id="countries-title" className="text-2xl font-medium md:text-4xl">
           Unlock Global Opportunities with Astro Overseas
         </h2>
-        <p className="text-balance pt-3 text-xl">
+        <p className="text-balance pt-3 md:text-xl">
           Find job opportunities in top European countries with Astro Overseas.
           Connect with trusted employers and take the next step in your
           international career.
         </p>
 
-        <div className="container max-w-3xl pt-16">
+        <div className="container max-w-3xl pt-16 md:hidden">
+          <div className="container mx-auto flex flex-wrap gap-3 px-9">
+            <Flags.FlagHungary className="h-9 w-auto" />
+            <Flags.FlagLuxembourg className="h-9 w-auto" />
+            <Flags.FlagNorway className="h-9 w-auto" />
+            <Flags.FlagFinland className="h-9 w-auto" />
+            <Flags.FlagLatvia className="h-9 w-auto" />
+            <Flags.FlagSweden className="h-9 w-auto" />
+            <Flags.FlagLithuania className="h-9 w-auto" />
+          </div>
+
+          <div className="mx-auto w-fit pt-4">
+            <DashedLogo className="h-12 w-auto" />
+          </div>
+          <div className="flex flex-col items-center -space-y-1.5 pt-6">
+            <p className="font-sofia-condensed text-xl italic text-blue-700">
+              Your Trusted Place
+            </p>
+            <svg
+              width="115"
+              height="11"
+              viewBox="0 0 115 11"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              <path
+                d="M0.5 10C7.72 5.56281 40.628 -2.17057 114.5 2.3934"
+                stroke="#1D4ED8"
+              />
+            </svg>
+          </div>
+        </div>
+
+        <div className="container hidden max-w-3xl pt-16 md:block">
           <div className="container mx-auto flex max-w-2xl justify-between px-9">
             <CountryTooltip name="Hungary" Flag={Flags.FlagHungary} />
             <CountryTooltip name="Luxembourg" Flag={Flags.FlagLuxembourg} />

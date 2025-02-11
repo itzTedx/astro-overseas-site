@@ -1,6 +1,11 @@
-export const DashedLogo = () => {
+import { JSX, SVGProps } from "react";
+
+export const DashedLogo = (
+  props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>
+) => {
   return (
     <svg
+      {...props}
       width="368"
       height="97"
       viewBox="0 0 368 97"
