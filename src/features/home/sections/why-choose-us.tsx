@@ -6,21 +6,24 @@ import TimedAccordion from "../components/timed-accordion";
 
 export const WhyChooseUs = () => {
   return (
-    <section className="container grid grid-cols-2 gap-6 rounded-2xl p-16 shadow-blue-glow">
+    <section
+      className="container grid grid-cols-2 gap-6 rounded-2xl p-16 shadow-blue-glow"
+      aria-label="Why Choose Astro Overseas"
+    >
       <div>
-        <h3 className="text-balance text-3xl font-semibold">
+        <h2 className="text-balance text-3xl font-semibold">
           Why Choose Astro Overseas? - Your Gateway to Global Opportunities
-        </h3>
+        </h2>
         <div className="pt-8">
           <TimedAccordion />
         </div>
       </div>
-      <div className="relative flex h-[48rem] items-end justify-center overflow-hidden rounded-2xl p-12">
+      <article className="relative flex h-[48rem] items-end justify-center overflow-hidden rounded-2xl p-12">
         <div className="relative z-10 max-w-sm space-y-2 rounded-xl bg-white px-6 py-4 shadow-xl">
-          <div className="flex items-center">
-            <IconRocket />
-            <h5 className="ml-3 font-semibold">Expertise That Opens Doors</h5>
-          </div>
+          <header className="flex items-center">
+            <IconRocket aria-hidden="true" />
+            <h3 className="ml-3 font-semibold">Expertise That Opens Doors</h3>
+          </header>
           <p className="text-sm">
             With years of experience in visa and immigration services, we
             simplify your journey to working, studying, or settling abroad.
@@ -29,10 +32,11 @@ export const WhyChooseUs = () => {
         <Image
           src="/images/expertise.jpg"
           fill
-          alt=""
+          alt="Professional immigration consultants working with clients"
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, 70vw"
         />
-      </div>
+      </article>
     </section>
   );
 };
