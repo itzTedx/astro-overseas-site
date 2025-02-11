@@ -53,7 +53,7 @@ export const Features: FC = memo(() => {
   return (
     <section
       id="features"
-      className="bg-blue-50 py-24"
+      className="bg-blue-50 py-16 md:py-24"
       aria-label="Features and Benefits"
     >
       <script
@@ -62,7 +62,7 @@ export const Features: FC = memo(() => {
       />
 
       <div className="container space-y-4 text-center">
-        <h2 className="text-4xl font-medium">
+        <h2 className="text-3xl font-medium md:text-4xl">
           <span className="sr-only">Our Features: </span>
           Seamless <span className="text-blue-700">Visa Solutions</span> Backed
           by Expertise
@@ -70,11 +70,12 @@ export const Features: FC = memo(() => {
         <p className="text-neutral-600">
           Smooth, stress-free visa processing with expert guidance and
           personalized
-          <br /> support. Your journey to Europe starts here.
+          <br className="max-md:hidden" /> support. Your journey to Europe
+          starts here.
         </p>
       </div>
 
-      <div className="container grid grid-cols-1 gap-6 pt-24 md:grid-cols-3 lg:gap-10">
+      <div className="container grid grid-cols-1 gap-6 pt-12 md:grid-cols-3 md:pt-24 lg:gap-10">
         <div className="flex flex-col items-center gap-8 rounded-xl border border-blue-700 bg-white px-6 py-8 text-center shadow-blue-glow lg:gap-12 lg:px-8 lg:py-10">
           <div className="space-y-2">
             <p className="font-sofia-condensed text-xl uppercase text-blue-700">
@@ -106,7 +107,7 @@ export const Features: FC = memo(() => {
           </ul>
 
           <ul
-            className="grid grid-cols-2 gap-4 px-4 md:grid-cols-3"
+            className="grid grid-cols-1 gap-4 px-4 md:grid-cols-3"
             role="list"
           >
             {FEATURES.map((feature) => (

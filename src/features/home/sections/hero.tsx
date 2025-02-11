@@ -18,14 +18,14 @@ export const Hero = () => {
     >
       <header className="container flex flex-col items-center space-y-4 py-12 text-center">
         <h1
-          className="text-6xl font-medium leading-tight tracking-tighter"
+          className="text-3xl font-medium leading-tight tracking-tighter md:text-6xl"
           itemProp="slogan"
         >
-          <span className="block">Turn Your Canada and Europe Dream</span>
-          <span className="block">into a Life-Changing Opportunity</span>
+          <span className="md:block">Turn Your Canada and Europe Dream</span>{" "}
+          <span className="md:block">into a Life Changing Opportunity</span>
         </h1>
         <p
-          className="max-w-3xl text-xl text-neutral-600"
+          className="max-w-3xl text-neutral-600 md:text-xl"
           itemProp="description"
         >
           Seamless visa and immigration solutions to work and thrive in Europe.
@@ -33,7 +33,7 @@ export const Hero = () => {
           your future.
         </p>
         <div
-          className="flex gap-4 pt-10"
+          className="flex gap-4 pt-10 max-md:flex-col"
           itemScope
           itemType="https://schema.org/Service"
         >
@@ -72,14 +72,14 @@ export const Hero = () => {
       >
         <InfiniteSlider
           durationOnHover={100}
-          gap={36}
+          gap={32}
           duration={35}
           aria-label="Featured destinations"
         >
           {HOME_SLIDER.map((img) => (
             <div
               key={img.img}
-              className="relative flex aspect-[3/4] w-[20rem] items-end justify-center p-6"
+              className="dm:w-[20rem] relative flex aspect-[3/4] w-48 items-end justify-center p-4 md:p-6"
               itemScope
               itemType="https://schema.org/ImageObject"
             >
