@@ -36,7 +36,7 @@ const faqs = [
 
 export function Faqs() {
   return (
-    <section id="faq" className="container grid grid-cols-2 gap-6 py-24">
+    <section id="faq" className="container grid grid-cols-2 gap-6 pb-24">
       <div className="space-y-6">
         <div className="flex items-center gap-3">
           <IconFaq />

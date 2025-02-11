@@ -17,7 +17,7 @@ interface AccordionItemProps {
 
 const AccordionItem: React.FC<AccordionItemProps> = memo(
   ({ question, answer, index }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(index === 0);
     const headingId = `accordion-heading-${index}`;
     const contentId = `accordion-content-${index}`;
 
