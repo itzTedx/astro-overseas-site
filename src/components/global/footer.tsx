@@ -40,7 +40,7 @@ export const Footer = memo(() => {
           <Link href="/" aria-label="Astro Overseas Home">
             <Logo className="brightness-[15] saturate-0" aria-hidden="true" />
           </Link>
-          <h5 className="sr-only">Astro Overseas</h5>
+          <h5 className="sr-">Astro Overseas</h5>
           <p>
             Unlock Your Global Opportunities: Work Permits and Permanent
             Residency Visas for Canada and Europe with Astro Overseas!
@@ -77,8 +77,8 @@ export const Footer = memo(() => {
       </div>
       <p className="border-t border-blue-950 p-2 text-center text-blue-200">
         <small>
-          Copyright © {new Date().getFullYear()}. All Rights Reserved.{" "}
-          <br className="md:hidden" />
+          Copyright © {new Date().getFullYear()}. All Rights Reserved by Astro
+          Overseas FZCO LLC. <br />
           Website Developed by{" "}
           <Link
             href="https://www.zironmedia.com?utm_source=astrooverseas"
