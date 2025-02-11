@@ -18,15 +18,14 @@ export const Countries = memo(function Countries() {
           international career.
         </p>
 
-        <div className="container max-w-3xl pt-16 md:hidden">
-          <div className="container mx-auto flex flex-wrap gap-3 px-9">
-            <Flags.FlagHungary className="h-9 w-auto" />
-            <Flags.FlagLuxembourg className="h-9 w-auto" />
-            <Flags.FlagNorway className="h-9 w-auto" />
-            <Flags.FlagFinland className="h-9 w-auto" />
-            <Flags.FlagLatvia className="h-9 w-auto" />
-            <Flags.FlagSweden className="h-9 w-auto" />
-            <Flags.FlagLithuania className="h-9 w-auto" />
+        <div className="pt-16 md:hidden">
+          <div className="flex flex-wrap items-center justify-center gap-3 px-9">
+            <Flags.FlagHungary className="h-auto w-20" />
+            <Flags.FlagLuxembourg className="h-auto w-20" />
+            <Flags.FlagNorway className="h-auto w-20" />
+            <Flags.FlagFinland className="h-auto w-20" />
+            <Flags.FlagLatvia className="h-auto w-20" />
+            <Flags.FlagSweden className="h-auto w-20" />
           </div>
 
           <div className="mx-auto w-fit pt-4">
