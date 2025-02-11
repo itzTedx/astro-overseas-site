@@ -79,12 +79,12 @@ export const Hero = () => {
           {HOME_SLIDER.map((img) => (
             <div
               key={img.img}
-              className="relative aspect-[3/4] w-[20rem]"
+              className="relative flex aspect-[3/4] w-[20rem] items-end justify-center p-6"
               itemScope
               itemType="https://schema.org/ImageObject"
             >
               <h2
-                className="absolute bottom-3 left-1/2 z-10 -translate-x-1/2 rounded-md bg-white px-3 py-1 text-foreground"
+                className="relative z-10 text-nowrap rounded-md bg-white px-3 py-1 font-sofia-condensed uppercase text-blue-700"
                 itemProp="name"
               >
                 {img.title}
