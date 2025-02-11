@@ -12,14 +12,17 @@ const COUNTER_DATA = [
 
 export const Counter = memo(() => {
   return (
-    <section className="container max-w-6xl py-24 text-center">
+    <section
+      className="container max-w-6xl py-24 text-center"
+      aria-label="Achievement Statistics"
+    >
       <h3 className="text-3xl font-medium">
         Astro overseas has assisted over 4,600+ clients in securing permits
       </h3>
       <div className="flex items-center justify-between gap-4 pt-9 font-sofia-condensed text-blue-700">
         {COUNTER_DATA.map(({ value, label }, i) => (
           <Fragment key={label}>
-            <div>
+            <div aria-label={`${label}: ${value}+`}>
               <NumberCounter suffix="+" className="text-6xl">
                 {value}
               </NumberCounter>
@@ -27,7 +30,11 @@ export const Counter = memo(() => {
             </div>
 
             {i < COUNTER_DATA.length - 1 && (
-              <Separator className="h-16 bg-blue-700" orientation="vertical" />
+              <Separator
+                className="h-16 bg-blue-700"
+                orientation="vertical"
+                aria-hidden="true"
+              />
             )}
           </Fragment>
         ))}
