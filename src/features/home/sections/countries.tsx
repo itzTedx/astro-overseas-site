@@ -1,274 +1,42 @@
-import { DashedLogo } from "@/assets/dashed-logo";
-import {
-  FlagFinland,
-  FlagHungary,
-  FlagLatvia,
-  FlagLithuania,
-  FlagLuxembourg,
-  FlagNorway,
-  FlagSweden,
-} from "@/assets/flags";
-import { Separator } from "@/components/ui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import { memo } from "react";
 
-export const Countries = () => {
+import { DashedLogo } from "@/assets/dashed-logo";
+import * as Flags from "@/assets/flags";
+
+import { CountryTooltip } from "../components/country-tooltip";
+
+export const Countries = memo(function Countries() {
   return (
-    <section className="bg-split-white-blue">
+    <section className="bg-split-white-blue" aria-labelledby="countries-title">
       <div className="container rounded-2xl bg-blue-100 p-14">
-        <h3 className="text-4xl font-medium">
+        <h2 id="countries-title" className="text-4xl font-medium">
           Unlock Global Opportunities with Astro Overseas
-        </h3>
+        </h2>
         <p className="text-balance pt-3 text-xl">
           Find job opportunities in top European countries with Astro Overseas.
           Connect with trusted employers and take the next step in your
           international career.
         </p>
+
         <div className="container max-w-3xl pt-16">
           <div className="container mx-auto flex max-w-2xl justify-between px-9">
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <FlagHungary />
-                </TooltipTrigger>
-                <TooltipContent className="space-y-3 p-6">
-                  <div className="flex items-center gap-3">
-                    <FlagHungary className="h-12 w-auto rounded-md border" />
-                    <div className="">
-                      <p className="text-xs tracking-tighter text-neutral-500">
-                        Visa & Immigration Services
-                      </p>
-                      <h4 className="font-semibold">Hungary</h4>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div>
-                    <h5 className="text-xs text-neutral-400">
-                      Positions Available
-                    </h5>
-                    <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                      <li>General worker</li>
-                      <li>Heavy Duty Driver</li>
-                      <li>Fabrication & Fitters</li>
-                      <li>Welders</li>
-                      <li>Industrial Electricians</li>
-                      <li>Taxi Driver</li>
-                      <li>Light Duty Driver</li>
-                    </ul>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <FlagLuxembourg />
-                </TooltipTrigger>
-                <TooltipContent className="space-y-3 p-6">
-                  <div className="flex items-center gap-3">
-                    <FlagLuxembourg className="h-12 w-auto rounded-md border" />
-                    <div className="">
-                      <p className="text-xs tracking-tighter text-neutral-500">
-                        Visa & Immigration Services
-                      </p>
-                      <h4 className="font-semibold">Luxembourg</h4>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div>
-                    <h5 className="text-xs text-neutral-400">
-                      Positions Available
-                    </h5>
-                    <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                      <li>General worker</li>
-                      <li>Heavy Duty Driver</li>
-                      <li>Fabrication & Fitters</li>
-                      <li>Welders</li>
-                      <li>Industrial Electricians</li>
-                      <li>Taxi Driver</li>
-                      <li>Light Duty Driver</li>
-                    </ul>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <CountryTooltip name="Hungary" Flag={Flags.FlagHungary} />
+            <CountryTooltip name="Luxembourg" Flag={Flags.FlagLuxembourg} />
           </div>
+
           <div className="inline-flex w-full justify-between py-12">
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <FlagNorway />
-                </TooltipTrigger>
-                <TooltipContent className="space-y-3 p-6">
-                  <div className="flex items-center gap-3">
-                    <FlagNorway className="h-12 w-auto rounded-md border" />
-                    <div className="">
-                      <p className="text-xs tracking-tighter text-neutral-500">
-                        Visa & Immigration Services
-                      </p>
-                      <h4 className="font-semibold">Norway</h4>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div>
-                    <h5 className="text-xs text-neutral-400">
-                      Positions Available
-                    </h5>
-                    <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                      <li>General worker</li>
-                      <li>Heavy Duty Driver</li>
-                      <li>Fabrication & Fitters</li>
-                      <li>Welders</li>
-                      <li>Industrial Electricians</li>
-                      <li>Taxi Driver</li>
-                      <li>Light Duty Driver</li>
-                    </ul>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-            <div className="-translate-y-9">
-              <TooltipProvider delayDuration={0}>
-                <Tooltip>
-                  <TooltipTrigger>
-                    <FlagFinland />
-                  </TooltipTrigger>
-                  <TooltipContent className="space-y-3 p-6">
-                    <div className="flex items-center gap-3">
-                      <FlagFinland className="h-12 w-auto rounded-md border" />
-                      <div className="">
-                        <p className="text-xs tracking-tighter text-neutral-500">
-                          Visa & Immigration Services
-                        </p>
-                        <h4 className="font-semibold">Finland</h4>
-                      </div>
-                    </div>
-                    <Separator />
-                    <div>
-                      <h5 className="text-xs text-neutral-400">
-                        Positions Available
-                      </h5>
-                      <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                        <li>General worker</li>
-                        <li>Heavy Duty Driver</li>
-                        <li>Fabrication & Fitters</li>
-                        <li>Welders</li>
-                        <li>Industrial Electricians</li>
-                        <li>Taxi Driver</li>
-                        <li>Light Duty Driver</li>
-                      </ul>
-                    </div>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <FlagLatvia />
-                </TooltipTrigger>
-                <TooltipContent className="space-y-3 p-6">
-                  <div className="flex items-center gap-3">
-                    <FlagLatvia className="h-12 w-auto rounded-md border" />
-                    <div className="">
-                      <p className="text-xs tracking-tighter text-neutral-500">
-                        Visa & Immigration Services
-                      </p>
-                      <h4 className="font-semibold">Latvia</h4>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div>
-                    <h5 className="text-xs text-neutral-400">
-                      Positions Available
-                    </h5>
-                    <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                      <li>General worker</li>
-                      <li>Heavy Duty Driver</li>
-                      <li>Fabrication & Fitters</li>
-                      <li>Welders</li>
-                      <li>Industrial Electricians</li>
-                      <li>Taxi Driver</li>
-                      <li>Light Duty Driver</li>
-                    </ul>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <CountryTooltip name="Norway" Flag={Flags.FlagNorway} />
+            <CountryTooltip
+              name="Finland"
+              Flag={Flags.FlagFinland}
+              className="-translate-y-9"
+            />
+            <CountryTooltip name="Latvia" Flag={Flags.FlagLatvia} />
           </div>
 
           <div className="container mx-auto flex max-w-xl justify-between">
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <FlagSweden />
-                </TooltipTrigger>
-                <TooltipContent className="space-y-3 p-6">
-                  <div className="flex items-center gap-3">
-                    <FlagSweden className="h-12 w-auto rounded-md border" />
-                    <div className="">
-                      <p className="text-xs tracking-tighter text-neutral-500">
-                        Visa & Immigration Services
-                      </p>
-                      <h4 className="font-semibold">Sweden</h4>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div>
-                    <h5 className="text-xs text-neutral-400">
-                      Positions Available
-                    </h5>
-                    <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                      <li>General worker</li>
-                      <li>Heavy Duty Driver</li>
-                      <li>Fabrication & Fitters</li>
-                      <li>Welders</li>
-                      <li>Industrial Electricians</li>
-                      <li>Taxi Driver</li>
-                      <li>Light Duty Driver</li>
-                    </ul>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
-
-            <TooltipProvider delayDuration={0}>
-              <Tooltip>
-                <TooltipTrigger>
-                  <FlagLithuania />
-                </TooltipTrigger>
-                <TooltipContent className="space-y-3 p-6">
-                  <div className="flex items-center gap-3">
-                    <FlagLithuania className="h-12 w-auto rounded-md border" />
-                    <div className="">
-                      <p className="text-xs tracking-tighter text-neutral-500">
-                        Visa & Immigration Services
-                      </p>
-                      <h4 className="font-semibold">Lithuania</h4>
-                    </div>
-                  </div>
-                  <Separator />
-                  <div>
-                    <h5 className="text-xs text-neutral-400">
-                      Positions Available
-                    </h5>
-                    <ul className="grid grid-cols-2 gap-4 text-sm font-medium">
-                      <li>General worker</li>
-                      <li>Heavy Duty Driver</li>
-                      <li>Fabrication & Fitters</li>
-                      <li>Welders</li>
-                      <li>Industrial Electricians</li>
-                      <li>Taxi Driver</li>
-                      <li>Light Duty Driver</li>
-                    </ul>
-                  </div>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+            <CountryTooltip name="Sweden" Flag={Flags.FlagSweden} />
+            <CountryTooltip name="Lithuania" Flag={Flags.FlagLithuania} />
           </div>
 
           <div className="mx-auto w-fit pt-4">
@@ -284,6 +52,7 @@ export const Countries = () => {
               viewBox="0 0 115 11"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 d="M0.5 10C7.72 5.56281 40.628 -2.17057 114.5 2.3934"
@@ -295,4 +64,4 @@ export const Countries = () => {
       </div>
     </section>
   );
-};
+});
