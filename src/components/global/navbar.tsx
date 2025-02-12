@@ -17,7 +17,7 @@ export const Navbar = () => {
           <Logo />
         </Link>
         <Button asChild variant="outline" size="lg">
-          <Link href="/" aria-label="Contact us">
+          <Link href="/contact" aria-label="Contact us">
             Contact us now
           </Link>
         </Button>

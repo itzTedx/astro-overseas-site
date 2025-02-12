@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { PrimaryButton } from "@/components/custom/primary-button";
 import { Button } from "@/components/ui/button";
@@ -59,8 +60,9 @@ export const Hero = () => {
             size="lg"
             aria-label="Contact our support team"
             itemProp="contactPoint"
+            asChild
           >
-            Contact us now
+            <Link href="/contact">Contact us now</Link>
           </Button>
         </div>
       </header>

@@ -4,10 +4,10 @@ import { Header } from "@/features/contact/sections/header";
 
 export default function ContactPage() {
   return (
-    <main>
+    <main className="container max-w-5xl py-12 pb-24">
       <Header />
 
-      <div>
+      <div className="grid grid-cols-3 gap-12">
         <ContactForm />
         <ContactInfo />
       </div>

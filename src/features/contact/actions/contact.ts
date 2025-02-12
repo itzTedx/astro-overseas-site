@@ -20,6 +20,12 @@ const contactSchema = z.object({
     .toLowerCase()
     .trim()
     .max(254, "Email is too long"),
+  phone: z
+    .string()
+    .min(4, "Invalid phone")
+    .toLowerCase()
+    .trim()
+    .max(25, "Phone is too long"),
   message: z
     .string()
     .min(10, "Message must be at least 10 characters")
@@ -44,6 +50,7 @@ export async function sendEmail(
     const rawData = {
       name: String(formData.get("name") || ""),
       email: String(formData.get("email") || ""),
+      phone: String(formData.get("phone") || ""),
       message: String(formData.get("message") || ""),
     };
 
@@ -55,7 +62,7 @@ export async function sendEmail(
       };
     }
 
-    const { name, email, message } = validation.data;
+    const { name, email, message, phone } = validation.data;
 
     // Sanitize HTML content
     const sanitizedMessage = DOMPurify.sanitize(message);
@@ -81,6 +88,7 @@ export async function sendEmail(
           <h2>New Contact Form Submission</h2>
           <p><strong>Name:</strong> ${DOMPurify.sanitize(name)}</p>
           <p><strong>Email:</strong> ${DOMPurify.sanitize(email)}</p>
+          <p><strong>Phone:</strong> ${DOMPurify.sanitize(phone)}</p>
           <p><strong>Message:</strong></p>
           <p>${sanitizedMessage}</p>
         </div>

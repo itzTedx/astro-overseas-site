@@ -3,6 +3,7 @@ import { Manrope, Sofia_Sans_Condensed } from "next/font/google";
 
 import { Footer } from "@/components/global/footer";
 import { Navbar } from "@/components/global/navbar";
+import { Toaster } from "@/components/ui/sonner";
 import { cn } from "@/lib/utils";
 
 import "./globals.css";
@@ -46,7 +47,10 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+
         <Footer />
+
+        <Toaster />
       </body>
     </html>
   );
